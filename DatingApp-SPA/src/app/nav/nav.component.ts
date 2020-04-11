@@ -20,4 +20,12 @@ export class NavComponent implements OnInit {
         console.log('Failed to login');
     });
   }
+  loggedIn() {
+    return this.authService.loggedIn();
+  }
+  logout() {
+    this.authService.logout();
+    this.model = {};
+    console.log('logged out!!');
+  }
 }
