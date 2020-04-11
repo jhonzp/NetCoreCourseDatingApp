@@ -44,7 +44,7 @@ namespace DatingApp.Api.Controllers
             return StatusCode(201);
         }
 
-        [HttpPost("loggin")]
+        [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] UserForLoginDto userForLogin)
         {
             var userFromRepo = await _repository.Loggin(userForLogin.Username.ToLower(), userForLogin.Password);
