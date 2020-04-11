@@ -18,12 +18,14 @@ export class AuthService {
       })
     );
   }
-
   loggedIn() {
     const token = localStorage.getItem('token');
     return !!token;
   }
   logout() {
-    localStorage.removeItem('token');    
+    localStorage.removeItem('token');
+  }
+  register(model: any) {
+    return this.http.post(this.baseurl + 'register', model);
   }
 }
