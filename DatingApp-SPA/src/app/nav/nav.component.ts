@@ -30,4 +30,7 @@ export class NavComponent implements OnInit {
     this.model = {};
     this.alertify.message('logged out!!');
   }
+  GetUserName() {
+    return this.authService.GetUserName();
+  }
 }
