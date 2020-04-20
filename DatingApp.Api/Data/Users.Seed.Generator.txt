@@ -1,8 +1,10 @@
+//https://www.json-generator.com/#
+
 [
   '{{repeat(5)}}',
   {
-    Username: '{{firstName("female")}}@Dating.com',
-    Gender: 'female',
+    Username: '{{firstName("male")}}@Dating.com',
+    Gender: 'male',
     DateOfBirth: '{{date(new Date(1950,0,1), new Date(1999, 11, 31), "YYYY-MM-dd")}}',
     Password: 'password',
     KnownAs: function(){ return this.Username.split('@')[0]; },
@@ -16,7 +18,7 @@
     Photos: [
         {
           url: function(num) {
-          return 'https://randomuser.me/api/portraits/women/' + num.integer(1,99) + '.jpg';
+          return 'https://randomuser.me/api/portraits/men/' + num.integer(1,99) + '.jpg';
         },
         isMain: true,
         description: '{{lorem()}}'
