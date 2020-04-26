@@ -8,9 +8,9 @@ export interface User {
     gender: string;
     created: Date;
     lastActive: Date;
-    photUrl: string;
+    photoUrl: string;
     city: string;
-    intrests?: string;
+    interests?: string;
     introduction?: string;
     lookingFor?: string;
     photos?: Photo[];
